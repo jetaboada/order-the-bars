@@ -1,5 +1,12 @@
 .App {
   text-align: center;
 }
-
-
+.bar {
+  background-color: red;
+  width: 30px;
+}
+.barscontainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+}

@@ -1,13 +1,23 @@
-import React, { Component } from 'react'
+import React from 'react'
+import '../App.css'
 
-export default class Bar extends Component {
-  render() {
+ function Bar(props) {
+
+    const styles = {
+        height:props.height+'px',
+        backgroundColor:props.backgroundColor       
+    }
+ 
+
     return (
-      <div> 
-        <h3>
-            Esto es una barra
-        </h3>
-      </div>
+      <div 
+        style={styles}
+        className="bar"
+        onClick= {() => props.clickOnBar(props.id)}
+    >
+        
+    </div>
     );
   }
-}
+
+  export default Bar
