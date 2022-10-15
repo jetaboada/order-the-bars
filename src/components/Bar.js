@@ -8,7 +8,7 @@ import '../App.css'
         backgroundColor:props.backgroundColor       
     }
  
-
+    // console.log('cantMovs en Bar: ')
     return (
       <div 
         style={styles}

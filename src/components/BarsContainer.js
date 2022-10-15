@@ -1,14 +1,12 @@
 import React, { useState } from 'react'
 import Bar from './Bar'
 
-
+// let CantMovs = 0
 function BarsContainer(props) {
   const [barsSelected, setbarsSelected] = useState([])
   
   function clickOnBar(id){
     const _bars = [...barsSelected]
-    console.log("bars:",_bars)
-    console.log("selected:",barsSelected)
 
     switch(barsSelected.length){
       case 0:
@@ -27,18 +25,23 @@ function BarsContainer(props) {
   }
  
   return (
-    <div className = 'barscontainer'> 
-    {
-      props.bars.map((bar) =>
-        <Bar
-          height={bar.height} 
-          id={bar.id} 
-          key={bar.id} 
-          clickOnBar={clickOnBar}
-          backgroundColor={bar.backgroundColor}
-        />
-      )
-    }
+    <div>
+      {/* {
+        winner ? <h4>PARTIDA FINALIZADA</h4>
+      } */}
+      <div className = 'barscontainer'> 
+      {
+        props.bars.map((bar) =>
+          <Bar
+            height={bar.height} 
+            id={bar.id} 
+            key={bar.id} 
+            clickOnBar={clickOnBar}
+            backgroundColor={bar.backgroundColor}
+          />
+        )
+      }
+      </div>
     </div>
   )
 }

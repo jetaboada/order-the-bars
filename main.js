@@ -39,8 +39,7 @@ function comenzar(){
     }
 
     bars.sort(randomScoreOrder);
-    countMovs = 0;
-    barsSelected=[];
+    
     let i = 0;
     bars.forEach(bar => {
         const barra = document.createElement("div"); 
@@ -55,6 +54,9 @@ function comenzar(){
         let  element = document.getElementById(barra.id);
         element.addEventListener("click", function(){clickOnBar(barra.id)});
     });
+
+    countMovs = 0;
+    barsSelected=[];
 }
 
 function clickOnBar(barId){
